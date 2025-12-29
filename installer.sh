@@ -41,8 +41,8 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 echo "User creation (sudo)..."
 # Create the user with the specified username
 sudo useradd -m -s /bin/bash $username
-sudo usermod -aG docker debian
-sudo usermod -aG sudo debian
+sudo usermod -aG docker $username
+sudo usermod -aG sudo $username
 
 # Set the user's password
 echo "$username:$password" | sudo chpasswd
