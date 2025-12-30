@@ -17,7 +17,9 @@ read  -n 1 -p "Confirmation that you have changed the variables : " mainmenuinpu
 
 echo "Install Updates and Utils..."
 sudo apt update && apt upgrade -y
-sudo apt install btop neofetch
+sudo apt install btop -y
+sudo apt install neofetch -y
+sudo apt install fastfetch -y
 
 echo "Install Docker"
 # Add Docker's official GPG key:
