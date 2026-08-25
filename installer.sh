@@ -60,4 +60,4 @@ sudo systemctl restart sshd
 sudo chown -R $username:$username /home/$username/.ssh
 echo "Please check your sshd_config file !"
 sudo -i -u $username bash -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
-sudo -i -u thedrewen bash -c 'mkdir ~/dev && mkdir ~/prod && mkdir ~/internal'
+sudo -i -u $username bash -c 'mkdir ~/dev && mkdir ~/prod && mkdir ~/internal'
