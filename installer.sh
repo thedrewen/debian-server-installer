@@ -20,6 +20,7 @@ sudo apt update && apt upgrade -y
 sudo apt install btop -y
 sudo apt install neofetch -y
 sudo apt install fastfetch -y
+sudo apt install zsh -y
 
 echo "Install Docker"
 # Add Docker's official GPG key:
@@ -56,3 +57,7 @@ echo "Enable SSH KEYS AND Disable Password..."
 sudo sed -i -e 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
 sudo sed -i -e 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd
+sudo chown -R $username:$username /home/$username/.ssh
+echo "Please check your sshd_config file !"
+sudo -i $username bash -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+sudo -i $username bash -c 'mkdir ~/dev && mkdir ~/prod && mkdir ~/internal'
